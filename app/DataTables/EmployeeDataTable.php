@@ -63,7 +63,7 @@ class EmployeeDataTable extends DataTable
             ->setTableId('employee-table')
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->dom('lfrtip')
+            ->dom('Blfrtip')
             ->orderBy(1, 'asc')
             ->pageLength(10)
             ->responsive(true)

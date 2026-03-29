@@ -24,6 +24,12 @@ class Employee extends Model
         'salary'
     ];
 
+    protected $casts = [
+        'date_of_birth' => 'date',
+        'hire_date' => 'date',
+        'salary' => 'decimal:2',
+    ];
+
     public function department()
     {
         return $this->belongsTo(Department::class);
