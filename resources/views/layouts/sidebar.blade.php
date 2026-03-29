@@ -44,14 +44,14 @@
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
 
-                <li class="sidebar-item active ">
-                    <a href="index.html" class='sidebar-link'>
+                <li class="sidebar-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 {{-- Employee --}}
-                <li class="sidebar-item  ">
+                <li class="sidebar-item {{ request()->routeIs('employee.*') ? 'active' : '' }}">
                     <a href="{{ route('employee.index') }}" class='sidebar-link'>
                         <i class="bi bi-people-fill"></i>
                         <span>Employee</span>

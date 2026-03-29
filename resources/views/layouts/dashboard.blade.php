@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets/compiled/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/compiled/css/app-dark.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/compiled/css/iconly.css') }}">
+    @vite('resources/css/app.css')
     @stack('styles')
 </head>
 
@@ -24,15 +25,6 @@
     <div id="app">
         @include('layouts/sidebar')
         <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
-
-            <div class="page-heading">
-                <h3>@yield('title')</h3>
-            </div>
             @yield('content')
 
             <footer>
@@ -49,9 +41,10 @@
     </div>
     <script src="{{ asset('assets/static/js/components/dark.js') }}"></script>
     <script src="{{ asset('assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('assets/extensions/jquery/jquery.min.js') }}"></script>
 
-
-    <script src="{{ asset('assets/compiled/js/app.js') }}"></script>
+    <script type="module" src="{{ asset('assets/compiled/js/app.js') }}"></script>
+    @vite('resources/js/app.js')
 
     @stack('scripts')
 </body>
